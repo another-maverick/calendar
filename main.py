@@ -30,7 +30,7 @@ def print_calendar_month(year, month):
 
 @click.command()
 @click.option('-y', '--year', required=True, type=int, help='Enter the calendar year')
-@click.option('-m', '--month', required=False, type=int, help='Enter the calendar month. Format 1-12')
+@click.option('-m', '--month', required=False, type=int, help='Enter the calendar month. Format: 1-12')
 def print_calendar(year, month):
     """
     main function
@@ -39,10 +39,10 @@ def print_calendar(year, month):
     :param month: int
     """
 
-    assert re.search('^[0-9]\d{3}$', str(year)), 'year format is incorrect'
+    assert re.search('^[0-9]\d{3}$', str(year)), 'Year format is incorrect'
 
     if month:
-        assert re.search('(^0?[1-9]$)|(^[1][0-2]$)', str(month)), 'month format is incorrect'
+        assert re.search('(^0?[1-9]$)|(^[1][0-2]$)', str(month)), 'Month format is incorrect'
         print_calendar_month(year, month)
         return
     else:

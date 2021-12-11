@@ -46,7 +46,7 @@ def print_calendar(year, month):
         assert re.search('(^0?[1-9]$)|(^[1][0-2]$)|'
                          '(?:Jan(?:uary)?|Feb(?:ruary)?|Mar(?:ch)?|'
                          'Apr(?:il)?|May|Jun(?:e)?|Jul(?:y)?|Aug(?:ust)?|'
-                         'Sep(?:tember)?|Oct(?:ober)?|(Nov|Dec)(?:ember))', str(month), re.IGNORECASE), \
+                         'Sep(?:tember)?|Oct(?:ober)?|(Nov|Dec)(?:ember)?)', str(month), re.IGNORECASE), \
             'Month format is incorrect'
 
         if len(month) <= 2:
